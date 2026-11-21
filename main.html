@@ -155,3 +155,761 @@ header {
   cursor: pointer;
 
 }
+/* HERO SECTION */
+
+.hero {
+  min-height: 620px;
+  display: flex;
+  align-items: center;
+  background:
+    radial-gradient(
+      circle at 80% 40%,
+      #17447755,
+      transparent 40%
+    ),
+    linear-gradient(140deg, #080d18, #0c1830);
+}
+
+.hero-content {
+  max-width: 800px;
+  padding: 100px 0;
+}
+
+.eyebrow {
+  color: var(--blue);
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-size: clamp(43px, 8vw, 76px);
+  line-height: 1.1;
+  margin-bottom: 25px;
+}
+
+.hero h1 span {
+  color: var(--blue);
+}
+
+.hero p {
+  color: var(--muted);
+  font-size: 18px;
+  max-width: 620px;
+  margin-bottom: 32px;
+}
+
+.button {
+  display: inline-block;
+  background: #2584e8;
+  color: white;
+  padding: 13px 23px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: .25s;
+}
+
+.button:hover {
+  transform: translateY(-3px);
+  background: #4098f5;
+}
+
+.button.secondary {
+  background: transparent;
+  border: 1px solid var(--border);
+  margin-left: 10px;
+}
+
+/* GENERAL SECTIONS */
+
+section {
+  padding: 85px 0;
+}
+
+.section-heading {
+  max-width: 700px;
+  margin-bottom: 40px;
+}
+
+.section-heading h2 {
+  font-size: clamp(28px, 5vw, 42px);
+  margin-bottom: 12px;
+}
+
+.section-heading p {
+  color: var(--muted);
+}
+/* RESEARCH GRID */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background: linear-gradient(145deg, var(--panel), #0e1728);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 26px;
+  transition: .25s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: var(--blue);
+}
+
+.card .symbol {
+  font-size: 30px;
+  color: var(--blue);
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* ABOUT SECTION */
+
+.about-layout {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 28px;
+}
+
+.panel ul {
+  padding-left: 20px;
+  color: var(--muted);
+}
+
+.panel li {
+  margin: 8px 0;
+}
+
+.status {
+  color: #8ee6b0;
+  font-size: 13px;
+  font-weight: bold;
+}
+/* ROADMAP */
+
+.roadmap {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+.phase {
+  border-left: 3px solid var(--blue);
+  padding: 5px 0 5px 20px;
+}
+
+.phase small {
+  color: var(--blue);
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.phase h3 {
+  margin: 8px 0;
+}
+
+.phase p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* DEVELOPMENT LOG */
+
+.log-entry {
+  display: flex;
+  gap: 20px;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.log-entry time {
+  color: var(--blue);
+  min-width: 100px;
+  font-size: 13px;
+}
+
+.log-entry p {
+  color: var(--muted);
+}
+
+/* CONTACT */
+
+.cta {
+  background: radial-gradient(circle, #15345a, #0d1729);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 45px;
+  text-align: center;
+}
+
+.cta h2 {
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+.cta p {
+  color: var(--muted);
+  margin: 0 auto 25px;
+  max-width: 620px;
+}
+
+/* FOOTER */
+
+footer {
+  border-top: 1px solid var(--border);
+  padding: 28px 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+/* ANIMATIONS */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: .7s;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* MOBILE RESPONSIVENESS */
+
+@media (max-width: 760px) {
+
+  .menu-button {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 75px;
+    left: 0;
+    right: 0;
+    background: var(--bg);
+    padding: 20px 5%;
+    border-bottom: 1px solid var(--border);
+    flex-direction: column;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .roadmap {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    min-height: 550px;
+  }
+
+  .button.secondary {
+    margin: 12px 0 0;
+  }
+
+  .log-entry {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .cta {
+    padding: 30px 20px;
+  }
+}
+
+</style>
+</head>
+
+<body>
+<header>
+  <div class="container navbar">
+
+    <a class="logo" href="#home">
+      NEXUS<span>-1</span>
+    </a>
+
+    <button
+      class="menu-button"
+      id="menuButton"
+      aria-label="Toggle navigation"
+      aria-expanded="false">
+      ☰
+    </button>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#roadmap">Roadmap</a></li>
+      <li><a href="#updates">Updates</a></li>
+    </ul>
+
+  </div>
+</header>
+
+<main>
+
+<!-- HOMEPAGE -->
+
+<section class="hero" id="home">
+
+  <div class="container hero-content">
+
+    <div class="eyebrow">
+      INDEPENDENT ARTIFICIAL INTELLIGENCE RESEARCH
+    </div>
+
+    <h1>
+      Exploring the next frontier of
+      <span>intelligence.</span>
+    </h1>
+
+    <p>
+      NEXUS-1 is an independent experimental AI research
+      project exploring machine learning, neural networks,
+      language technologies, and adaptive intelligent systems.
+    </p>
+
+    <a class="button" href="#research">
+      Explore Research
+    </a>
+
+    <a class="button secondary" href="#about">
+      About NEXUS-1
+    </a>
+
+  </div>
+
+</section>
+
+<!-- ABOUT SECTION -->
+
+<section id="about">
+
+  <div class="container about-layout">
+
+    <div class="section-heading reveal">
+
+      <div class="eyebrow">
+        ABOUT THE PROJECT
+      </div>
+
+      <h2>
+        Research driven by curiosity.
+      </h2>
+
+      <p>
+        NEXUS-1 is a developing independent project focused
+        on understanding how intelligent software systems
+        are designed, trained, evaluated, and improved.
+      </p>
+
+      <br>
+
+      <p>
+        The objective is to learn through experimentation,
+        document progress, and develop practical prototypes
+        while studying the foundations of modern AI.
+      </p>
+
+    </div>
+
+    <div class="panel reveal">
+
+      <div class="status">
+        ● DEVELOPMENT IN PROGRESS
+      </div>
+
+      <h3 style="margin:16px 0">
+        Core Principles
+      </h3>
+
+      <ul>
+        <li>Evidence-based experimentation</li>
+        <li>Transparent development</li>
+        <li>Responsible AI research</li>
+        <li>Continuous improvement</li>
+        <li>Technical innovation</li>
+      </ul>
+
+    </div>
+
+  </div>
+
+</section>
+<!-- RESEARCH SECTION -->
+
+<section id="research" style="background:#0b1322">
+
+  <div class="container">
+
+    <div class="section-heading reveal">
+
+      <div class="eyebrow">
+        AREAS OF INTEREST
+      </div>
+
+      <h2>
+        Research and technology.
+      </h2>
+
+      <p>
+        Exploring the foundations and applications of
+        artificial intelligence.
+      </p>
+
+    </div>
+
+    <div class="grid">
+
+      <article class="card reveal">
+        <div class="symbol">⌘</div>
+        <h3>Machine Learning</h3>
+        <p>
+          Exploring algorithms that learn patterns from
+          data and improve through training and evaluation.
+        </p>
+      </article>
+
+      <article class="card reveal">
+        <div class="symbol">◈</div>
+        <h3>Neural Networks</h3>
+        <p>
+          Studying computational models inspired by
+          interconnected networks and their ability
+          to recognize complex patterns.
+        </p>
+      </article>
+
+      <article class="card reveal">
+        <div class="symbol">◎</div>
+        <h3>Natural Language Processing</h3>
+        <p>
+          Investigating how computers process, interpret,
+          and generate human language.
+        </p>
+      </article>
+
+      <article class="card reveal">
+        <div class="symbol">⌬</div>
+        <h3>Adaptive Systems</h3>
+        <p>
+          Exploring systems that can adjust their
+          behavior based on information and feedback.
+        </p>
+      </article>
+
+      <article class="card reveal">
+        <div class="symbol">▤</div>
+        <h3>Knowledge Systems</h3>
+        <p>
+          Researching ways to organize information,
+          represent knowledge, and support retrieval.
+        </p>
+      </article>
+
+      <article class="card reveal">
+        <div class="symbol">⌁</div>
+        <h3>AI Evaluation</h3>
+        <p>
+          Studying testing methods, performance
+          measurements, reliability, and limitations.
+        </p>
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ROADMAP SECTION -->
+
+<section id="roadmap">
+
+  <div class="container">
+
+    <div class="section-heading reveal">
+
+      <div class="eyebrow">
+        DEVELOPMENT PLAN
+      </div>
+
+      <h2>
+        The NEXUS-1 roadmap.
+      </h2>
+
+      <p>
+        A proposed development path for the project.
+        Each phase will depend on the results of previous work.
+      </p>
+
+    </div>
+
+    <div class="roadmap">
+
+      <div class="phase reveal">
+        <small>PHASE 01</small>
+        <h3>Foundations</h3>
+        <p>
+          Study programming, mathematics, algorithms,
+          and the fundamentals of machine learning.
+        </p>
+      </div>
+
+      <div class="phase reveal">
+        <small>PHASE 02</small>
+        <h3>Initial Prototypes</h3>
+        <p>
+          Build small experimental programs and
+          test basic machine learning models.
+        </p>
+      </div>
+
+      <div class="phase reveal">
+        <small>PHASE 03</small>
+        <h3>System Development</h3>
+        <p>
+          Explore language processing, knowledge
+          storage, and adaptive system designs.
+        </p>
+      </div>
+
+      <div class="phase reveal">
+        <small>PHASE 04</small>
+        <h3>Evaluation and Improvement</h3>
+        <p>
+          Evaluate prototypes, document results,
+          identify weaknesses, and improve the system.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+<!-- DEVELOPMENT UPDATES -->
+
+<section id="updates" style="background:#0b1322">
+
+  <div class="container">
+
+    <div class="section-heading reveal">
+
+      <div class="eyebrow">
+        PROJECT JOURNAL
+      </div>
+
+      <h2>
+        Development updates.
+      </h2>
+
+      <p>
+        A record of experiments, milestones,
+        discoveries, and future improvements.
+      </p>
+
+    </div>
+
+    <div class="log-entry reveal">
+      <time>2026</time>
+      <div>
+        <h3>Project concept established</h3>
+        <p>
+          NEXUS-1 research direction and initial
+          development objectives defined.
+        </p>
+      </div>
+    </div>
+
+    <div class="log-entry reveal">
+      <time>PLANNED</time>
+      <div>
+        <h3>Initial AI prototype</h3>
+        <p>
+          Develop and evaluate an initial experimental
+          machine learning prototype.
+        </p>
+      </div>
+    </div>
+
+    <div class="log-entry reveal">
+      <time>PLANNED</time>
+      <div>
+        <h3>Research documentation</h3>
+        <p>
+          Publish technical notes, experiments,
+          and project progress.
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+  <div class="container">
+
+    <div class="cta reveal">
+
+      <div class="eyebrow">
+        THE FUTURE IS EXPERIMENTAL
+      </div>
+
+      <h2>
+        Building toward something greater.
+      </h2>
+
+      <p>
+        NEXUS-1 is an ongoing exploration of artificial
+        intelligence, computational systems, and
+        technological innovation.
+      </p>
+
+      <a href="#home" class="button">
+        Back to top
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+</main>
+
+<!-- FOOTER -->
+
+<footer>
+
+  <div class="container footer-inner">
+
+    <div>
+      <strong>NEXUS<span style="color:#399cff">-1</span></strong>
+      <p>Independent AI Research Project</p>
+    </div>
+
+    <p>
+      © <span id="year"></span> NEXUS-1.
+      All rights reserved.
+    </p>
+
+  </div>
+
+</footer>
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+// MOBILE NAVIGATION
+
+const menuButton = document.getElementById("menuButton");
+const navLinks = document.getElementById("navLinks");
+
+menuButton.addEventListener("click", () => {
+
+  const isOpen = navLinks.classList.toggle("open");
+
+  menuButton.setAttribute(
+    "aria-expanded",
+    String(isOpen)
+  );
+
+});
+
+// CLOSE MENU AFTER CLICKING A LINK
+
+document.querySelectorAll(".nav-links a").forEach(link => {
+
+  link.addEventListener("click", () => {
+
+    navLinks.classList.remove("open");
+
+    menuButton.setAttribute(
+      "aria-expanded",
+      "false"
+    );
+
+  });
+
+});
+
+// AUTOMATIC COPYRIGHT YEAR
+
+document.getElementById("year").textContent =
+  new Date().getFullYear();
+
+// SCROLL ANIMATIONS
+
+const observer = new IntersectionObserver((entries) => {
+
+  entries.forEach(entry => {
+
+    if (entry.isIntersecting) {
+
+      entry.target.classList.add("visible");
+
+      observer.unobserve(entry.target);
+
+    }
+
+  });
+
+}, {
+  threshold: 0.15
+});
+
+document.querySelectorAll(".reveal").forEach(element => {
+
+  observer.observe(element);
+
+});
+
+</script>
+
+</body>
+</html>
